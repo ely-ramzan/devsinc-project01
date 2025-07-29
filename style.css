@@ -1,0 +1,43 @@
+
+#container-main {
+    width: 60%;
+    min-height: 300px;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    gap: 40px;
+    margin: 100px;
+    padding: 50px;
+}
+
+#container-input {
+    width: 100%;
+}
+#container-input > input {
+    width: 100%;
+    padding: 20px;
+    font-size: x-large;
+}
+
+#container-buttons {
+    display: flex;
+    gap: 20px;
+    width:100%;
+    border: 2px solid black;
+    padding: 20px;   
+}
+
+#container-nums {
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    gap:6px;
+}
+
+#container-exps {
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    gap:6px;
+}
