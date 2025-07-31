@@ -3,50 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Calculator</title>
   </head>
   <body>
-    <div id="container-main">
-      <div id="container-input">
-        <input type="text" 
-        value="0"
-        name="exp"
-        id="input"
-        />
+    <div class="app-container">
+      <div class="calculator">
+        <div class="calculator-display">
+          <input
+            type="text"
+            id="expression-input"
+            class="expression-input"
+            placeholder="Type or click to enter expression"
+          />
+          <div id="result-display" class="result">0</div>
+        </div>
+        <div id="calculator-buttons" class="calculator-buttons">
+          <button data-value="C" data-action="clear">C</button>
+          <button data-value="(" data-action="insert">(</button>
+          <button data-value=")" data-action="insert">)</button>
+          <button data-value="D" data-action="delete">D</button>
+          <button data-value="/" data-action="insert">/</button>
+          <button data-value="sin(" data-action="insert">sin</button>
+          <button data-value="7" data-action="insert">7</button>
+          <button data-value="8" data-action="insert">8</button>
+          <button data-value="9" data-action="insert">9</button>
+          <button data-value="*" data-action="insert">*</button>
+          <button data-value="cos(" data-action="insert">cos</button>
+          <button data-value="4" data-action="insert">4</button>
+          <button data-value="5" data-action="insert">5</button>
+          <button data-value="6" data-action="insert">6</button>
+          <button data-value="-" data-action="insert">-</button>
+          <button data-value="tan(" data-action="insert">tan</button>
+          <button data-value="1" data-action="insert">1</button>
+          <button data-value="2" data-action="insert">2</button>
+          <button data-value="3" data-action="insert">3</button>
+          <button data-value="+" data-action="insert">+</button>
+          <button data-value="π" data-action="insert">π</button>
+          <button data-value="e" data-action="insert">e</button>
+          <button data-value="0" data-action="insert">0</button>
+          <button data-value="." data-action="insert">.</button>
+          <button data-value="^" data-action="insert">^</button>
+          <button data-value="sqrt(" data-action="insert">sqrt</button>
+          
+          <button data-value="=" data-action="equals" class="span-4">=</button>
+        </div>
       </div>
 
-      <div id="container-buttons">
-        <div id="container-nums">
-          <button id="one" class="nums">1</button>
-          <button id="two" class="nums">2</button>
-          <button id="three" class="nums">3</button>
-          <button id="four" class="nums">4</button>
-          <button id="five" class="nums">5</button>
-          <button id="six" class="nums">6</button>
-          <button id="seven" class="nums">7</button>
-          <button id="eight" class="nums">8</button>
-          <button id="nine" class="nums">9</button>
-          <button id="zero" class="nums">0</button>
-          <button id="C" class="nums">C</button>
-          <button id="D" class="nums">D</button>
+      <div class="side-panel">
+        <div id="history-panel" class="history-panel">
+          <h2>History</h2>
+          <div id="history-list" class="history-list"></div>
         </div>
-        <div id="container-exps">
-          <button id="btn-equals" class="exps">=</button>
-          <button id="btn-add" class="exps">+</button>
-          <button id="btn-sub" class="exps">-</button>
-          <button id="btn-mul" class="exps">*</button>
-          <button id="btn-div" class="exps">/</button>
-          <button id="btn-pow" class="exps">^</button>
-          <button id="btn-leftp" class="exps">(</button>
-          <button id="btn-rightp" class="exps">)</button>
-          <button id="btn-sqrt" class="exps">sqrt</button>
-          <button id="btn-sin" class="exps">sin</button>
-          <button id="btn-cos" class="exps">cos</button>
-          <button id="btn-tan" class="exps">tan</button>
+
+        <div id="variable-manager" class="variable-manager">
+          <h2>Variables</h2>
+          <div class="variable-inputs">
+            <input type="text" id="var-name" placeholder="Name (e.g., x)" />
+            <input type="text" id="var-value" placeholder="Value (e.g., 10)" />
+            <button id="save-var-btn">Save</button>
+          </div>
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.1/math.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
